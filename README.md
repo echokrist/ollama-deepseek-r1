@@ -24,6 +24,8 @@ curl -X POST http://localhost:11434/api/generate \
 ```
 
 ### Curl from inside a docker container
+*within the same Docker network*
+
 
 ```
 curl -X POST ollama-server:11434/api/generate \
