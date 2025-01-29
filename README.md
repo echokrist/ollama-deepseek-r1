@@ -1,5 +1,5 @@
-# ollama-deepseek-r1
-A docker setup for running Ollama with deepseek-r1.
+# ollama-docker
+A docker setup for running Ollama.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template/ZFH0bl?referralCode=AqDjJs)
 
