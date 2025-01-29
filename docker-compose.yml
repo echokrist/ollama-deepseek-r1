@@ -1,0 +1,23 @@
+
+services:
+  ollama-server:
+    container_name: ollama-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      ollama-network:
+        aliases:
+          - ollama-server
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-model-cache:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama-model-cache:
+
+networks:
+  ollama-network:
+    driver: bridge
