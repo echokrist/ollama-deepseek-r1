@@ -3,13 +3,13 @@ A docker setup for running Ollama with deepseek-r1.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template/ZFH0bl?referralCode=AqDjJs)
 
-## How to build and run as server
+## How to build and up container
 ```
 docker compose build &&
 docker compose up -d
 ```
 
-## How to Communicate with container
+## How to Communicate with container once up
 
 ### Curl from outside the container
 
