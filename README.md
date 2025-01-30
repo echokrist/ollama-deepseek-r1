@@ -9,6 +9,25 @@ docker compose build &&
 docker compose up -d
 ```
 
+You need to pull or run a model in order to have access to any models. 
+You can do so by the docker exec lines below, and you can replace the deepseek-r1:8b model
+with any model you want from: https://ollama.com/search
+
+
+
+### From terminal for prompts
+Replace deepseek-r1:8b with any model of choice.
+```
+docker exec -it ollama-server ollama run deepseek-r1:8b
+```
+
+## How to pull more models into the container
+Replace deepseek-r1:8b with any model of choice.
+```
+docker exec -it ollama-server ollama pull deepseek-r1:8b
+```
+
+
 ## How to Communicate with container once up
 
 ### Curl from outside the container
@@ -37,16 +56,4 @@ curl -X POST ollama-server:11434/api/generate \
          }'
 ```
 
-### From terminal for prompts
-Replace deepseek-r1:8b with any model of choice.
-New models can be found here: https://ollama.com/search
-```
-docker exec -it ollama-server ollama run deepseek-r1:8b
-```
 
-## How to pull more models into the container
-Replace deepseek-r1:8b with any model of choice.
-New models can be found here: https://ollama.com/search
-```
-docker exec -it ollama-server ollama pull deepseek-r1:8b
-```
