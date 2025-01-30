@@ -17,8 +17,9 @@ with any model you want from: https://ollama.com/search
 
 ### From terminal for prompts
 Replace deepseek-r1:8b with any model of choice.
+Please note: The docker restart ollama-server is added to reset the server and model running. 
 ```
-docker exec -it ollama-server ollama run deepseek-r1:8b
+docker exec -it ollama-server ollama run deepseek-r1:8b && docker restart ollama-server 
 ```
 
 ## How to pull more models into the container
