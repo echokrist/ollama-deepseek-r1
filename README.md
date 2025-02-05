@@ -4,9 +4,16 @@ A docker setup for running Ollama.
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template/hMi6ra?referralCode=AqDjJs)
 
 ## How to build and up container
+
+### Build with no model
 ```
 docker compose build &&
 docker compose up -d
+```
+
+### Build with specific model
+```
+docker compose build --build-arg OLLAMA_MODEL={Replace with exact model name from Ollama}
 ```
 
 You need to pull or run a model in order to have access to any models. 
