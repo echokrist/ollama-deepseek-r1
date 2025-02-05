@@ -23,7 +23,7 @@ RUN if [ -n "$OLLAMA_MODEL" ]; then \
     (ollama serve &) && \
     # Wait for the server to listen on port 11411
     sh -c 'for i in 1 2 3 4 5; do \
-    if nc -z 127.0.0.1 11411; then \
+    if nc -z 127.0.0.1 11434; then \
     echo "Ollama server is ready!"; \
     break; \
     fi; \
@@ -37,7 +37,7 @@ RUN if [ -n "$OLLAMA_MODEL" ]; then \
     fi
 
 # Expose the default Ollama server port
-EXPOSE 11411
+EXPOSE 11434
 
 # Serve the model
 CMD ["ollama", "serve"]

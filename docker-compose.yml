@@ -11,7 +11,7 @@ services:
         aliases:
           - ollama-server
     ports:
-      - "11411:11411"
+      - "11434:11434"
     volumes:
       - ollama-model-cache:/root/.ollama/models
     restart: unless-stopped
