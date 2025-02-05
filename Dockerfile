@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     curl \
-    netcat \
+    netcat-traditional \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Ollama
