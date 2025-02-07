@@ -6,12 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-    curl \
     netcat-traditional \
     && rm -rf /var/lib/apt/lists/*
-
-# Install Ollama
-RUN curl -L https://ollama.com/install.sh | bash
 
 ARG OLLAMA_MODEL
 ENV OLLAMA_MODEL=$OLLAMA_MODEL
