@@ -1,9 +1,6 @@
 # Use the latest Ubuntu image
 FROM ollama/ollama:latest
 
-# Prevent interactive prompts
-ENV DEBIAN_FRONTEND=noninteractive
-
 ARG OLLAMA_MODEL
 ENV OLLAMA_MODEL=$OLLAMA_MODEL
 
