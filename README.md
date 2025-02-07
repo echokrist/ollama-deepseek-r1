@@ -40,6 +40,8 @@ docker exec -it ollama-server ollama pull deepseek-r1:8b
 
 ### Curl from outside the container
 
+#### Prompt with POST
+
 ```
 curl -X POST http://localhost:11434/api/generate \
      -H "Content-Type: application/json" \
@@ -50,10 +52,17 @@ curl -X POST http://localhost:11434/api/generate \
          }'
 ```
 
+#### Pull new models
+```
+curl http://localhost:11434/api/pull -d '{
+  "model": "qwen2.5:0.5b"
+}'
+```
+
 ### Curl from inside a docker container
 *within the same Docker network*
 
-
+#### Prompt with POST
 ```
 curl -X POST ollama-server:11434/api/generate \
      -H "Content-Type: application/json" \
@@ -64,4 +73,10 @@ curl -X POST ollama-server:11434/api/generate \
          }'
 ```
 
+#### Pull new models
+```
+curl ollama-server:11434/api/pull -d '{
+  "model": "qwen2.5:0.5b"
+}'
+```
 
