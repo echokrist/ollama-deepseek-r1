@@ -1,8 +1,6 @@
 # ollama-docker
 A docker setup for running Ollama.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template/hMi6ra?referralCode=AqDjJs)
-
 ## How to build and up container
 
 ### Build with no model
